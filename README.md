@@ -145,7 +145,7 @@ Then, rebuild demo docker image with a system property that points to the DB.
 
 # Docker Compose example
 
-The directory [docker-compose](../docker-compose) contains a Docker Compose configuration to run a containerized application
+The directory [docker-compose](docker-compose) contains a Docker Compose configuration to run a containerized application
 and Oracle database.
 
 ## Prerequisites
@@ -164,7 +164,7 @@ Go to directory [`quarkus-example-app`](quarkus-example-app) and build the appli
 
 ## Start Oracle and build the database
 
-Go to the directory [`docker-compose`](../docker-compose). First start the database container:
+Go to the directory [`docker-compose`](docker-compose). First start the database container:
 
     $ docker-compose up -d oracledb
     $ docker-compose logs -f oracledb
