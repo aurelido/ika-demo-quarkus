@@ -1,0 +1,117 @@
+-------------------------------------------------------------------------------
+Test set: org.acme.GreetingResourceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 13.54 s <<< FAILURE! -- in org.acme.GreetingResourceTest
+org.acme.GreetingResourceTest.testHelloEndpoint -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.RuntimeException: 
+java.lang.RuntimeException: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.RuntimeException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:361)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:232)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:152)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:194)
+	at org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:106)
+	at com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:109)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:329)
+	at io.quarkus.devservices.oracle.deployment.OracleDevServicesProcessor$1.startDatabase(OracleDevServicesProcessor.java:78)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:289)
+	... 10 more
+
+	at io.quarkus.test.junit.QuarkusTestExtension.throwBootFailureException(QuarkusTestExtension.java:638)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptTestClassConstructor(QuarkusTestExtension.java:722)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.RuntimeException: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.RuntimeException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:361)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:232)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:152)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:194)
+	at org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:106)
+	at com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:109)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:329)
+	at io.quarkus.devservices.oracle.deployment.OracleDevServicesProcessor$1.startDatabase(OracleDevServicesProcessor.java:78)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:289)
+	... 10 more
+
+	at io.quarkus.runner.bootstrap.AugmentActionImpl.runAugment(AugmentActionImpl.java:334)
+	at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:251)
+	at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:60)
+	at io.quarkus.test.junit.QuarkusTestExtension.doJavaStart(QuarkusTestExtension.java:224)
+	at io.quarkus.test.junit.QuarkusTestExtension.ensureStarted(QuarkusTestExtension.java:605)
+	at io.quarkus.test.junit.QuarkusTestExtension.beforeAll(QuarkusTestExtension.java:655)
+	... 1 more
+Caused by: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.RuntimeException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:361)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:232)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:152)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:194)
+	at org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:106)
+	at com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:109)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:329)
+	at io.quarkus.devservices.oracle.deployment.OracleDevServicesProcessor$1.startDatabase(OracleDevServicesProcessor.java:78)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:289)
+	... 10 more
+
+	at io.quarkus.builder.Execution.run(Execution.java:123)
+	at io.quarkus.builder.BuildExecutionBuilder.execute(BuildExecutionBuilder.java:79)
+	at io.quarkus.deployment.QuarkusAugmentor.run(QuarkusAugmentor.java:160)
+	at io.quarkus.runner.bootstrap.AugmentActionImpl.runAugment(AugmentActionImpl.java:330)
+	... 6 more
+Caused by: java.lang.RuntimeException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:361)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:232)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:152)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:194)
+	at org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:106)
+	at com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:109)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:329)
+	at io.quarkus.devservices.oracle.deployment.OracleDevServicesProcessor$1.startDatabase(OracleDevServicesProcessor.java:78)
+	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:289)
+	... 9 more
+

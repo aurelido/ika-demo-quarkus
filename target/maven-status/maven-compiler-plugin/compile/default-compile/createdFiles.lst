@@ -1,0 +1,8 @@
+com/belas/ika/service/dto/ProcedureDetail.class
+org/acme/GreetingResource.class
+org/acme/MyEntity.class
+com/belas/ika/web/ProcedureResource.class
+com/belas/ika/service/dto/ProcedureParameter.class
+META-INF/panache-archive.marker
+com/belas/ika/config/DatabaseConnectionHealthCheck.class
+com/belas/ika/config/IkaApplicationHealthCheck.class

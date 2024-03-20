@@ -1,0 +1,7 @@
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/com/belas/ika/config/DatabaseConnectionHealthCheck.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/com/belas/ika/config/IkaApplicationHealthCheck.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/com/belas/ika/service/dto/ProcedureDetail.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/com/belas/ika/service/dto/ProcedureParameter.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/com/belas/ika/web/ProcedureResource.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/org/acme/GreetingResource.java
+/Users/aurelioaragones/Desarrollo/Belastingdienst/workspace/ika-demo-quarkus/src/main/java/org/acme/MyEntity.java

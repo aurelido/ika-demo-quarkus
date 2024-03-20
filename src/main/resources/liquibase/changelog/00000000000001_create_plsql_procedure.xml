@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Example to create a PL/SQL procedure -->
+    <changeSet id="00000000000003" author="your_name">
+        <sql>
+            CREATE OR REPLACE PROCEDURE your_dummy_procedure (p_param IN NUMBER, p_result OUT NUMBER) AS
+            BEGIN
+                p_result := p_param * 2;
+            END your_dummy_procedure;
+        </sql>
+    </changeSet>
+</databaseChangeLog>
